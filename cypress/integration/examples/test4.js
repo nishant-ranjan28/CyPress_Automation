@@ -4,7 +4,7 @@ describe("My Second test suite", function(){
 
     it("My first second case", function(){
 
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+        cy.visit("https://qaclickacademy.com/practice.php");
         cy.get('#alertbtn').click()
         cy.get('[value ="Confirm"]').click()
 
@@ -17,6 +17,9 @@ describe("My Second test suite", function(){
         cy.on('window:confirm',(str) =>{
             expect(str).to.equal('Hello , Are you sure you want to confirm?')
         })
+        cy.get('#opentab').invoke('removeAttr', 'target').click()
+        cy.url().should('include','qaclickacademy')
+        cy.go('back')
     })
 
 })
