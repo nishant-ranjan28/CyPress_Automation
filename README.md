@@ -1,2 +1,2 @@
-# CyPress_Automation
+# cypress-automation
 Automation with cypress
